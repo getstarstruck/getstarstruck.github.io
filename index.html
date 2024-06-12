@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Upload File</h2>
+<form action="https://your-bucket-name.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="key" value="${filename}">
+  <input type="hidden" name="acl" value="public-read-write">
+  <input type="hidden" name="Content-Type" value="application/octet-stream">
+  <input type="file" name="file">
+  <input type="submit" value="Upload">
+</form>
+
+</body>
+</html>
